@@ -1,0 +1,135 @@
+﻿<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+    xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/internal"
+    xmlns:dxbt="http://schemas.devexpress.com/winfx/2008/xaml/bars/themekeys"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:dxdst="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys">
+
+    <sys:Double x:Key="{dxbt:BarSubItemThemeKey ResourceKey=ContentToArrowIndent}">3.0</sys:Double>
+    
+    <ControlTemplate x:Key="{dxbt:BarSubItemThemeKey ResourceKey=ArrowTemplate}" TargetType="{x:Type dxb:BarSubItemArrowControl}">
+        <Grid Background="#00FFFFFF ">
+            <Border x:Name="arrow" Background="#00FFFFFF " HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Grid Height="4" HorizontalAlignment="Center" VerticalAlignment="Center" Width="5">
+                    <Path SnapsToDevicePixels="True" Data="F1 M 69,15L 74,15L 74,16.0001L 73,16.0001L 73,17.0001L 72,17.0001L 72,18.0001L 71,18.0001L 71,17.0001L 70,17.0001L 70,16.0001L 69,16.0001L 69,15 Z " Fill="#FFFF00FF " Margin="0,1,0,0" Opacity="0.35" Stretch="Fill" />
+                    <Path SnapsToDevicePixels="True" Data="F1 M 69,15L 74,15L 74,16.0001L 73,16.0001L 73,17.0001L 72,17.0001L 72,18.0001L 71,18.0001L 71,17.0001L 70,17.0001L 70,16.0001L 69,16.0001L 69,15 Z " Fill="#FFb1567d" Margin="0,0,0,1" Stretch="Fill" />
+                </Grid>
+            </Border>
+        </Grid>
+        <!--BEGIN WPF-->
+        <ControlTemplate.Triggers>
+            <DataTrigger Binding="{Binding Path=IsMouseOver, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type dxb:BarSubItemLinkControl}}}" Value="True">
+            </DataTrigger>
+        </ControlTemplate.Triggers>
+        <!--END WPF-->
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxbt:BarSubItemThemeKey ResourceKey=ArrowTemplateInMainMenu}" TargetType="{x:Type dxb:BarSubItemArrowControl}">
+        <Grid Background="#00FFFFFF ">
+            <Border x:Name="arrow" Background="#00FFFFFF " HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Path x:Name="path" Data="F1 M 1324,808L 1321,811 1318,808 1324,808z " Fill="#FF00FF00 " Height="3" HorizontalAlignment="Center" Margin="0,1,0,0" SnapsToDevicePixels="True" Stretch="Fill" VerticalAlignment="Center" Width="6" />
+            </Border>
+        </Grid>
+        <!--BEGIN WPF-->
+        <ControlTemplate.Triggers>
+            <DataTrigger Binding="{Binding Path=IsMouseOver, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type dxb:BarSubItemLinkControl}}}" Value="True">
+                <Setter Property="Fill" TargetName="path" Value="#FFFFFF00 " />
+            </DataTrigger>
+        </ControlTemplate.Triggers>
+        <!--END WPF-->
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxbt:BarSubItemThemeKey ResourceKey=ArrowTemplateInMenu}" TargetType="{x:Type dxb:BarSubItemArrowControl}">
+        <Path Data="F1 M 1340,804L 1344,808L 1340,812L 1340,804 Z " Margin="3,0,3,0" Fill="#FF00FFFF" HorizontalAlignment="Center" VerticalAlignment="Center" Height="8" Stretch="Fill" Width="4" />
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxbt:BarSubItemThemeKey ResourceKey=ArrowTemplateInStatusBar}" TargetType="{x:Type dxb:BarSubItemArrowControl}">
+        <Grid Background="#00FFFFFF ">
+            <Border x:Name="arrow" Background="#00FFFFFF " HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Path x:Name="path" Data="F1 M 1324,808L 1321,811 1318,808 1324,808z " Fill="#FFFF00FF" Height="3" HorizontalAlignment="Center" Margin="0,1,0,0" SnapsToDevicePixels="True" Stretch="Fill" VerticalAlignment="Center" Width="6" />
+            </Border>
+        </Grid>
+        <!--BEGIN WPF-->
+        <ControlTemplate.Triggers>
+            <DataTrigger Binding="{Binding Path=IsMouseOver, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type dxb:BarSubItemLinkControl}}}" Value="True">
+                <Setter Property="Fill" TargetName="path" Value="#FF000000 " />
+            </DataTrigger>
+        </ControlTemplate.Triggers>
+        <!--END WPF-->
+    </ControlTemplate>        
+    <ControlTemplate x:Key="{dxbt:BarSubItemThemeKey ResourceKey=ArrowTemplateInRibbonPageGroup}" TargetType="{x:Type dxb:BarSubItemArrowControl}">
+        <Grid Background="Transparent" SnapsToDevicePixels="True" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center" SnapsToDevicePixels="True" Margin="0,1,0,0" Width="Auto" Height="4">
+                <Path SnapsToDevicePixels="True" Width="Auto" Height="Auto" Stretch="Fill" Fill="#FFcd00cd" Data="F1 M 3.05176e-005,1L 3.05176e-005,2L 1,2.00003L 1,3.00003L 2,3.00003L 2,4.00003L 3,4.00003L 3,3.00003L 4,3.00003L 4,2.00003L 5,2.00003L 5,1.00003L 3.05176e-005,1 Z " Margin="0,1,0,0" />
+                <Path SnapsToDevicePixels="True" Width="Auto" Height="Auto" Stretch="Fill" Fill="#FFbd678c" Data="F1 M 0,0L 0,1L 0.999969,1L 0.999969,2L 1.99997,2L 1.99997,3L 2.99997,3L 2.99997,2L 3.99997,2L 3.99997,1L 4.99997,1L 4.99997,0L 0,0 Z " Margin="0,0,0,1" />
+            </Grid>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="ArrowAlignment">
+                    <VisualState x:Name="Right" />
+                    <VisualState x:Name="Bottom" />
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxbt:BarSubItemThemeKey ResourceKey=ArrowTemplateInRibbonQuickAccessToolbar}" TargetType="{x:Type dxb:BarSubItemArrowControl}">
+        <Grid Background="Transparent" SnapsToDevicePixels="True" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center" SnapsToDevicePixels="True" Margin="0,1,0,0" Width="Auto" Height="4">
+                <Path SnapsToDevicePixels="True" Width="Auto" Height="Auto" Stretch="Fill" Fill="#FFcd00cd" Data="F1 M 3.05176e-005,1L 3.05176e-005,2L 1,2.00003L 1,3.00003L 2,3.00003L 2,4.00003L 3,4.00003L 3,3.00003L 4,3.00003L 4,2.00003L 5,2.00003L 5,1.00003L 3.05176e-005,1 Z " Margin="0,1,0,0" />
+                <Path SnapsToDevicePixels="True" Width="Auto" Height="Auto" Stretch="Fill" Fill="#FFbd678c" Data="F1 M 0,0L 0,1L 0.999969,1L 0.999969,2L 1.99997,2L 1.99997,3L 2.99997,3L 2.99997,2L 3.99997,2L 3.99997,1L 4.99997,1L 4.99997,0L 0,0 Z " Margin="0,0,0,1" />
+            </Grid>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="ArrowAlignment">
+                    <VisualState x:Name="Right" />
+                    <VisualState x:Name="Bottom" />
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>    
+    <ControlTemplate x:Key="{dxbt:BarSubItemThemeKey ResourceKey=ArrowTemplateInRibbonStatusBarRight}" TargetType="{x:Type dxb:BarSubItemArrowControl}">
+        <Grid Background="Transparent" SnapsToDevicePixels="True" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center" SnapsToDevicePixels="True" Margin="0,1,0,0" Width="Auto" Height="4">
+                <Path SnapsToDevicePixels="True" Width="Auto" Height="Auto" Stretch="Fill" Fill="#FFcd00cd" Data="F1 M 3.05176e-005,1L 3.05176e-005,2L 1,2.00003L 1,3.00003L 2,3.00003L 2,4.00003L 3,4.00003L 3,3.00003L 4,3.00003L 4,2.00003L 5,2.00003L 5,1.00003L 3.05176e-005,1 Z " Margin="0,1,0,0" />
+                <Path SnapsToDevicePixels="True" Width="Auto" Height="Auto" Stretch="Fill" Fill="#FFbd678c" Data="F1 M 0,0L 0,1L 0.999969,1L 0.999969,2L 1.99997,2L 1.99997,3L 2.99997,3L 2.99997,2L 3.99997,2L 3.99997,1L 4.99997,1L 4.99997,0L 0,0 Z " Margin="0,0,0,1" />
+            </Grid>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="ArrowAlignment">
+                    <VisualState x:Name="Right" />
+                    <VisualState x:Name="Bottom" />
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Grid>
+    </ControlTemplate>
+    <Style x:Key="{dxbt:BarSubItemThemeKey ResourceKey=TextSplitterStyleInRibbonPageGroup}" TargetType="{x:Type dxb:TextSplitterControl}">
+        <Setter Property="FirstStringHorizontalAlignment" Value="Center" />
+        <Setter Property="SecondStringHorizontalAlignment" Value="Center" />
+        <Setter Property="SecondStringMargin" Value="0,-3,0,0" />
+        <Setter Property="Margin" Value="0,-2,0,0" />
+    </Style>
+    <ControlTemplate x:Key="{dxbt:BarSubItemThemeKey ResourceKey=NormalArrowTemplateInTextSplitter}" TargetType="{x:Type ContentControl}">
+        <Grid SnapsToDevicePixels="True" Margin="0,1,0,0" Width="Auto" Height="4">
+            <Path SnapsToDevicePixels="True" Width="Auto" Height="Auto" Stretch="Fill" Fill="#FFcd00cd" Data="F1 M 3.05176e-005,1L 3.05176e-005,2L 1,2.00003L 1,3.00003L 2,3.00003L 2,4.00003L 3,4.00003L 3,3.00003L 4,3.00003L 4,2.00003L 5,2.00003L 5,1.00003L 3.05176e-005,1 Z " Margin="0,1,0,0" />
+            <Path SnapsToDevicePixels="True" Width="Auto" Height="Auto" Stretch="Fill" Fill="#FF6700bd" Data="F1 M 0,0L 0,1L 0.999969,1L 0.999969,2L 1.99997,2L 1.99997,3L 2.99997,3L 2.99997,2L 3.99997,2L 3.99997,1L 4.99997,1L 4.99997,0L 0,0 Z " Margin="0,0,0,1" />
+        </Grid>
+    </ControlTemplate>
+    <ControlTemplate x:Key="{dxbt:BarSubItemThemeKey ResourceKey=SelectedArrowTemplateInTextSplitter}" TargetType="{x:Type ContentControl}">
+        <Grid SnapsToDevicePixels="True" Margin="0,1,0,0" Width="Auto" Height="4">
+            <Path SnapsToDevicePixels="True" Width="Auto" Height="Auto" Stretch="Fill" Fill="#FFcd00cd" Data="F1 M 3.05176e-005,1L 3.05176e-005,2L 1,2.00003L 1,3.00003L 2,3.00003L 2,4.00003L 3,4.00003L 3,3.00003L 4,3.00003L 4,2.00003L 5,2.00003L 5,1.00003L 3.05176e-005,1 Z " Margin="0,1,0,0" />
+            <Path SnapsToDevicePixels="True" Width="Auto" Height="Auto" Stretch="Fill" Fill="#FFbd678c" Data="F1 M 0,0L 0,1L 0.999969,1L 0.999969,2L 1.99997,2L 1.99997,3L 2.99997,3L 2.99997,2L 3.99997,2L 3.99997,1L 4.99997,1L 4.99997,0L 0,0 Z " Margin="0,0,0,1" />
+        </Grid>
+    </ControlTemplate>
+    
+    <Style x:Key="{dxbt:BarSubItemThemeKey ResourceKey=SelectedTextStyleInTextSplitter}" TargetType="{x:Type ContentControl}">
+        <Setter Property="Foreground" Value="#FF8b1542" />
+    </Style>
+    <Style x:Key="{dxbt:BarSubItemThemeKey ResourceKey=NormalTextStyleInTextSplitter}" TargetType="{x:Type ContentControl}">
+        <Setter Property="Foreground" Value="#FF8b1542" />
+    </Style>
+    <Style x:Key="{dxbt:BarSubItemThemeKey ResourceKey=BottomSideArrowContainerStyleInTextSplitter}" TargetType="{x:Type ContentControl}">
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+    <Style x:Key="{dxbt:BarSubItemThemeKey ResourceKey=RightSideArrowContainerStyleInTextSplitter}" TargetType="{x:Type ContentControl}">
+        <Setter Property="Margin" Value="2,0,0,0" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+</ResourceDictionary>
