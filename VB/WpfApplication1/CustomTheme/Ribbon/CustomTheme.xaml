@@ -1,0 +1,17 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"     
+    >
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/CustomTheme/Ribbon/Ribbon.xaml" />
+        <ResourceDictionary Source="/CustomTheme/Ribbon/BarItems.xaml" />
+        <ResourceDictionary Source="/CustomTheme/Ribbon/DropDownGallery.xaml" />
+        <ResourceDictionary Source="/CustomTheme/Ribbon/InRibbonGallery.xaml" />
+        <ResourceDictionary Source="/CustomTheme/Ribbon/QuickAccessToolbar.xaml" />
+        <ResourceDictionary Source="/CustomTheme/Ribbon/RibbonHeader.xaml" />
+        <ResourceDictionary Source="/CustomTheme/Ribbon/RibbonPage.xaml" />
+        <ResourceDictionary Source="/CustomTheme/Ribbon/RibbonPageCategory.xaml" />
+        <ResourceDictionary Source="/CustomTheme/Ribbon/RibbonPageGroup.xaml" />
+        <ResourceDictionary Source="/CustomTheme/Ribbon/RibbonStatusBar.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

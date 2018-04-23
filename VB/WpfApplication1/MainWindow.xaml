@@ -1,0 +1,118 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        x:Name="window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars"
+        xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon"
+        xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/core"
+        xmlns:dxbt="http://schemas.devexpress.com/winfx/2008/xaml/bars/themekeys"
+        xmlns:local="clr-namespace:WpfApplication1"
+        Title="MainWindow" Height="350" Width="525">
+    <dxb:BarManager x:Name="barManager">
+        <dxb:BarManager.Resources>
+            <ResourceDictionary Source="/CustomTheme.xaml" />
+        </dxb:BarManager.Resources>
+        <dxb:BarManager.Items>
+            <dxb:BarButtonItem x:Name="biButton1" Glyph="/Images/save-as-16x16.png" LargeGlyph="/Images/save-as-32x32.png" Content="Button1" />
+            <dxb:BarSplitButtonItem x:Name="biSplitButton1" Glyph="/Images/SmallGlyph.png" LargeGlyph="/Images/LargeGlyph.png" Content="Split Button1">
+                <dxb:BarSplitButtonItem.PopupControl>
+                    <dxb:PopupMenuInfo>
+                        <dxb:BarButtonItemLink BarItemName="biButton1" />
+                        <dxb:BarButtonItemLink BarItemName="biButton2" />
+                    </dxb:PopupMenuInfo>
+                </dxb:BarSplitButtonItem.PopupControl>
+            </dxb:BarSplitButtonItem>
+            <dxb:BarButtonItem x:Name="biButton2" Glyph="/Images/new-16x16.png" LargeGlyph="/Images/new-32x32.png" Content="Button2" />
+            <dxb:BarSubItem x:Name="biSubItem1" Glyph="/Images/open-16x16.png" LargeGlyph="/Images/open-32x32.png" Content="Sub Item1">
+                <dxb:BarSubItem.ItemLinks>
+                    <dxb:BarButtonItemLink BarItemName="biButton1" />
+                    <dxb:BarButtonItemLink BarItemName="biButton2" />                    
+                </dxb:BarSubItem.ItemLinks>
+            </dxb:BarSubItem>
+            <dxb:BarSubItem x:Name="biSubItem2" Glyph="/Images/save-as-16x16.png" LargeGlyph="/Images/save-as-32x32.png" Content="Sub Item1">
+                <dxb:BarSubItem.ItemLinks>
+                    <dxb:BarButtonItemLink BarItemName="biButton1" />
+                    <dxb:BarSubItemLink BarItemName="biSubItem1" />
+                    <dxb:BarButtonItemLink BarItemName="biButton2" />
+                    <dxb:BarSplitButtonItemLink BarItemName="biSplitButton1" />
+                </dxb:BarSubItem.ItemLinks>
+            </dxb:BarSubItem>
+            <dxr:RibbonGalleryBarItem x:Name="biGallery">
+                <dxr:RibbonGalleryBarItem.Gallery>
+                    <dxb:Gallery SizeMode="Vertical" />
+                </dxr:RibbonGalleryBarItem.Gallery>
+            </dxr:RibbonGalleryBarItem>
+        </dxb:BarManager.Items>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>            
+            <dxr:RibbonControl PageCategoryAlignment="Right">
+                <dxr:RibbonControl.Resources>
+                    <ResourceDictionary Source="CustomTheme.xaml" />
+                </dxr:RibbonControl.Resources>                
+                <dxr:RibbonControl.ApplicationMenu>
+                    <dxr:ApplicationMenuInfo RightPaneWidth="200" ShowRightPane="True">
+                        <dxr:ApplicationMenuInfo.ItemLinks>
+                            <dxb:BarButtonItemLink BarItemName="biButton1" />
+                            <dxb:BarSubItemLink BarItemName="biSubItem1" />
+                            <dxb:BarButtonItemLink BarItemName="biButton2" />
+                            <dxb:BarSplitButtonItemLink BarItemName="biSplitButton1" />
+                        </dxr:ApplicationMenuInfo.ItemLinks>
+                    </dxr:ApplicationMenuInfo>
+                </dxr:RibbonControl.ApplicationMenu>
+                <dxr:RibbonControl.ToolbarItemLinks>
+                    <dxb:BarButtonItemLink BarItemName="biButton1" />
+                    <dxb:BarSubItemLink BarItemName="biSubItem2" />
+                    <dxb:BarButtonItemLink BarItemName="biButton2" />
+                    <dxb:BarSplitButtonItemLink BarItemName="biSplitButton1" />
+                </dxr:RibbonControl.ToolbarItemLinks>
+                <dxr:RibbonControl.PageHeaderItemLinks>
+                    <dxb:BarButtonItemLink BarItemName="biButton2" />
+                    <dxb:BarSubItemLink BarItemName="biSubItem2" />
+                </dxr:RibbonControl.PageHeaderItemLinks>
+                <dxr:RibbonDefaultPageCategory>
+                    <dxr:RibbonPage Caption="Home">
+                        <dxr:RibbonPageGroup>
+                            <dxr:RibbonPageGroup.ItemLinks>
+                                <dxb:BarItemLink BarItemName="biButton1" />
+                                <dxb:BarItemLink BarItemName="biButton2" />
+                                <dxb:BarItemLink BarItemName="biSubItem1" />
+                                <dxb:BarItemLink BarItemName="biSplitButton1" />
+                            </dxr:RibbonPageGroup.ItemLinks>
+                        </dxr:RibbonPageGroup>
+                    </dxr:RibbonPage>
+                </dxr:RibbonDefaultPageCategory>
+                <dxr:RibbonPageCategory Caption="Contextual category" Color="LightYellow">
+                    <dxr:RibbonPage Caption="Contextual page">
+                        <dxr:RibbonPageGroup Caption="Contextual group">
+                            <dxr:RibbonPageGroup.ItemLinks>
+                                <dxb:BarItemLink BarItemName="biButton1" />
+                                <dxb:BarItemLink BarItemName="biButton2" />
+                                <dxb:BarItemLink BarItemName="biSubItem1" />
+                                <dxb:BarItemLink BarItemName="biSplitButton1" />
+                            </dxr:RibbonPageGroup.ItemLinks>
+                        </dxr:RibbonPageGroup>
+                    </dxr:RibbonPage>
+                </dxr:RibbonPageCategory>
+            </dxr:RibbonControl>
+            <dxr:RibbonStatusBarControl Grid.Row="2">
+                <dxr:RibbonStatusBarControl.LeftItemLinks>
+                    <dxb:BarItemLink BarItemName="biButton1" />
+                    <dxb:BarItemLink BarItemName="biButton2" />
+                    <dxb:BarItemLink BarItemName="biSubItem1" />
+                    <dxb:BarItemLink BarItemName="biSplitButton1" />
+                </dxr:RibbonStatusBarControl.LeftItemLinks>
+                <dxr:RibbonStatusBarControl.RightItemLinks>
+                    <dxb:BarItemLink BarItemName="biButton1" />
+                    <dxb:BarItemLink BarItemName="biButton2" />
+                    <dxb:BarItemLink BarItemName="biSubItem1" />
+                    <dxb:BarItemLink BarItemName="biSplitButton1" />
+                </dxr:RibbonStatusBarControl.RightItemLinks>
+            </dxr:RibbonStatusBarControl>
+            
+        </Grid>
+    </dxb:BarManager>            
+</Window>
