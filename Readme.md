@@ -31,7 +31,7 @@
 * [RibbonPageCategory.xaml](./CS/WpfApplication1/CustomTheme/Ribbon/RibbonPageCategory.xaml) (VB: [RibbonPageCategory.xaml](./VB/WpfApplication1/CustomTheme/Ribbon/RibbonPageCategory.xaml))
 * [RibbonPageGroup.xaml](./CS/WpfApplication1/CustomTheme/Ribbon/RibbonPageGroup.xaml) (VB: [RibbonPageGroup.xaml](./VB/WpfApplication1/CustomTheme/Ribbon/RibbonPageGroup.xaml))
 * [RibbonStatusBar.xaml](./CS/WpfApplication1/CustomTheme/Ribbon/RibbonStatusBar.xaml) (VB: [RibbonStatusBar.xaml](./VB/WpfApplication1/CustomTheme/Ribbon/RibbonStatusBar.xaml))
-* [MainWindow.xaml](./CS/WpfApplication1/MainWindow.xaml) (VB: [MainWindow.xaml.vb](./VB/WpfApplication1/MainWindow.xaml.vb))
+* [MainWindow.xaml](./CS/WpfApplication1/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/WpfApplication1/MainWindow.xaml))
 * [MainWindow.xaml.cs](./CS/WpfApplication1/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/WpfApplication1/MainWindow.xaml.vb))
 <!-- default file list end -->
 # How to create custom theme for the DXRibbon
