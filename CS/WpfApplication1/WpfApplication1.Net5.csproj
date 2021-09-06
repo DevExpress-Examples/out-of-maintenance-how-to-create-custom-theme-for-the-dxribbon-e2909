@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WpfApplication1</RootNamespace>
+    <AssemblyName>WpfApplication1</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+    <UseWPF>true</UseWPF>
+    <Platforms>x86;AnyCPU</Platforms>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <DefaultItemExcludes>obj*/**</DefaultItemExcludes>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\redo-16x16.png" />
+    <Resource Include="images\redo-32x32.png" />
+    <Resource Include="images\save-as-16x16.png" />
+    <Resource Include="images\save-as-32x32.png" />
+    <Resource Include="images\undo-16x16.png" />
+    <Resource Include="images\undo-32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\LargeGlyph.png" />
+    <Resource Include="images\new-16x16.png" />
+    <Resource Include="images\new-32x32.png" />
+    <Resource Include="images\open-16x16.png" />
+    <Resource Include="images\open-32x32.png" />
+    <Resource Include="images\print-16x16.png" />
+    <Resource Include="images\print-32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\save-16x16.png" />
+    <Resource Include="images\save-32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\SmallGlyph.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DevExpress.Data" Version="21.1.*-*" />
+    <PackageReference Include="DevExpress.Data.Desktop" Version="21.1.*-*" />
+    <PackageReference Include="DevExpress.Mvvm" Version="21.1.*-*" />
+    <PackageReference Include="DevExpress.Office.Core" Version="21.1.*-*" />
+    <PackageReference Include="DevExpress.Pdf.Core" Version="21.1.*-*" />
+    <PackageReference Include="DevExpress.Printing.Core" Version="21.1.*-*" />
+    <PackageReference Include="DevExpress.RichEdit.Core" Version="21.1.*-*" />
+    <PackageReference Include="DevExpress.RichEdit.Export" Version="21.1.*-*" />
+    <PackageReference Include="DevExpress.Wpf.Core" Version="21.1.*-*" />
+    <PackageReference Include="DevExpress.Wpf.Reporting" Version="21.1.*-*" />
+    <PackageReference Include="DevExpress.Wpf.Ribbon" Version="21.1.*-*" />
+    <PackageReference Include="DevExpress.Wpf.Themes.All" Version="21.1.*-*" />
+  </ItemGroup>
+</Project>
