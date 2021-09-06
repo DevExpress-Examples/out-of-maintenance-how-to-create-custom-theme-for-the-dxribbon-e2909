@@ -7,8 +7,6 @@
 ' You can find sample updates and versions for different programming languages here:
 ' http://www.devexpress.com/example=E2909
 
-
-Imports Microsoft.VisualBasic
 Imports System
 Imports System.Collections.Generic
 Imports System.Configuration
@@ -22,5 +20,6 @@ Namespace WpfApplication1
 	''' </summary>
 	Partial Public Class App
 		Inherits Application
+
 	End Class
 End Namespace
